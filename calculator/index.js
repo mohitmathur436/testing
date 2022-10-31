@@ -37,6 +37,35 @@ document.getElementById("sign").addEventListener("click", () => {
     }
 });
 
+document.getElementById("dot").addEventListener("click", () => {
+    if (input.innerText.includes(".")) return;
+
+    input.innerText += ".";
+});
+
+document.getElementById("sign").addEventListener("click", () => {
+    if (input.innerText.startsWith("-")) {
+        input.innerText = input.innerText.slice(1);
+    } else {
+        input.innerText = `-${input.innerText}`;
+    }
+});
+
+document.getElementById("dot").addEventListener("click", () => {
+    if (input.innerText.includes(".")) return;
+
+    input.innerText += ".";
+});
+
+document.getElementById("sign").addEventListener("click", () => {
+    if (input.innerText.startsWith("-")) {
+        input.innerText = input.innerText.slice(1);
+    } else {
+        input.innerText = `-${input.innerText}`;
+    }
+});
+
+
 document.querySelectorAll(".amt").forEach((element) => {
     element.addEventListener("click", () => {
         if (input.innerText) {
